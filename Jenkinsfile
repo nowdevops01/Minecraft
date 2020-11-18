@@ -36,6 +36,7 @@ pipeline {
             
             steps {
                 sh 'echo publish stage'
+                snDevOpsChange()
                 //archiveArtifacts artifacts: 'target/**/*.war', fingerprint: true
                 //snDevOpsStep()
                 //snDevOpsArtifact(artifactsPayload:"""{"artifacts": [{"name": "globex-web.war","version":"2.${env.BUILD_NUMBER}.0","semanticVersion": "2.${env.BUILD_NUMBER}.0","repositoryName": "Repo1"}]}""")
