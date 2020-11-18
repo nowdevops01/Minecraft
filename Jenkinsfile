@@ -25,7 +25,7 @@ pipeline {
         
             steps {
                 //snDevOpsStep()
-                h 'echo test..'
+                sh 'echo test..'
             }
         }
 
