@@ -8,17 +8,13 @@ pipeline {
         stage('Build') {
             steps {
                 //snDevOpsStep()
-                sh '''
-                    mvn --version
-                '''
-                sh 'mvn compile'   
+                sh 'echo building..'
             }
         }
         
         stage('Pre Test') {
             steps {
-                sh '''
-                    mvn --version
+                sh 'echo pre test..'
             }
         }
 
@@ -29,14 +25,7 @@ pipeline {
         
             steps {
                 //snDevOpsStep()
-                sh '''
-                    mvn --version
-                '''
-            }
-            post {
-                success {
-                    junit '**/target/surefire-reports/*.xml' 
-                }
+                h 'echo test..'
             }
         }
 
